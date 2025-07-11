@@ -1,0 +1,13 @@
+class Solution(object):
+    def maximumDifference(self, nums):
+        max = -1
+        for i in range(len(nums)):
+            for j in range(i+1,len(nums)):
+                diff = nums[j]-nums[i]
+                if diff>max:
+                    max = diff
+
+        if max == 0:
+            max = -1
+        return max
+           
