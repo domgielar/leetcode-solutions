@@ -1,0 +1,16 @@
+class Solution(object):
+    def mergeAlternately(self, word1, word2):
+        i = 0
+        j = 0
+        merged = ""
+        for k in range(len(word1)+ len(word2)):
+            if k%2==0 and i<len(word1):
+                merged+=word1[i]
+                i+=1
+            elif j<len(word2):
+                merged+=word2[j]
+                j+=1
+        
+        merged+=word1[i:]
+        merged+=word2[j:]
+        return merged
